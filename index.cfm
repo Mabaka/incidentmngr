@@ -1,8 +1,10 @@
-<cfquery name="test" datasource="MyDSN">
-    SELECT id,login FROM public.users;
-</cfquery>
+<cfscript>
 
-<cfoutput query="test">
-    #id#
-    #login#
+    importances_entity = entityLoad("Importances");
+    importances = entityToQuery(importances_entity);
+    writeDump(importances);
+</cfscript>
+
+<cfoutput query="importances">    
+    #name#
 </cfoutput>
