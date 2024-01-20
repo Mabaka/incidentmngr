@@ -1,6 +1,7 @@
 ﻿<cfscript>		
 	login = new login();	
 
+	//Можно было бы сделать доступной переменную логин везде. И делать logout с неё, а не создавать новую.
 	if(url["action"] == "logout") { login.logout(); location('/',false);};
 
 	if(url["action"]=="login") {
