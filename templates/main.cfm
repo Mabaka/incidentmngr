@@ -7,9 +7,13 @@
 	<title>Incident manager</title>
 </head>
 <body>
-	<cfinclude  template="header.cfm">        
-	 <cfscript>
-	</cfscript>   
+	<cfif isDefined("showheader")>
+		<cfif #showheader#>
+			<cfinclude  template="header.cfm">          
+		</cfif>
+	<cfelse>		
+		<cfinclude  template="header.cfm">
+	</cfif>		
 	<cfinclude	template=#view#>
 	<cfinclude  template="footer.cfm"> 
 </body>

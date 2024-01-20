@@ -1,5 +1,5 @@
 component displayname="login" {
-    public login function init(string inputUsername,string inputPassword){
+    public function init(string inputUsername="",string inputPassword=""){
         this.name = inputUsername;
         this.password = inputPassword;        
 
@@ -48,5 +48,11 @@ component displayname="login" {
         json = serializeJSON(response);
 
         return json;
+    }
+
+    public function logout(){
+        session.id = "";
+        session.isLoggedIn = false;
+        sessionRotate();        
     }
 }

@@ -2,7 +2,7 @@ component output='false'{
     this.name = "incidentmngr";
 
 	this.mappings['/controller'] = getDirectoryFromPath( getBaseTemplatePath() ) & 'controller';			
-
+	
 	this.ormEnabled = true;
 	this.sessionManagement = true;
 	this.sessionTimeout = createTimeSpan(0,2,0,0);

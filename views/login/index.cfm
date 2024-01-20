@@ -1,5 +1,5 @@
 ﻿<div class="form_wrapper">
-    <form name="login_form", id="login_form", class="form", action="/controller/login" method="post">
+    <form name="login_form", id="login_form", class="form", action="/controller/login?action=login" method="post">
         <div class="elements_wrapper">
 
             <div class="login_element_wrapper">

@@ -2,7 +2,7 @@ component output='false' {
     this.name = "incidentmngr";
 
 	this.ormEnabled = true;			
-    this.mappings["/model"] = ExpandPath('../../models');
+    this.mappings["/model"] = ExpandPath('../models');
 	this.SetClientCookies = true;
 
 	//Подключаемся к БД
@@ -26,4 +26,3 @@ component output='false' {
         CFCLocation = "/models"
   	};	
 }
-
