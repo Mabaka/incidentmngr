@@ -1,5 +1,5 @@
 ﻿<div class="form_wrapper">
-    <form name="login_form", id="login_form", class="form", action="/controller/reg" method="post">
+    <form name="login_form", id="login_form", class="form">
         <div class="elements_wrapper">
 
             <div class="name_element_wrapper">
@@ -12,7 +12,7 @@
             <div class="secondname_element_wrapper">
                 <div class="secondname_element">
                     <label for="secondname">Фамилия</label>
-                    <input type="secondname" name="secondname" required>
+                    <input type="secondname" name="secondname">
                 </div>
             </div>
 
