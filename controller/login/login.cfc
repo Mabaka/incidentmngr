@@ -17,25 +17,25 @@ component displayname="login" {
             ORMReload();            
             users = entityLoad("User",{login: this.name});                                         
             if(!arrayLen(users)){
-                status = "403";
+                status = 403;
                 message = "Login or password is wrong";
             }else{                
                 user = users[1];                
                 password = user.getPassword();                
-
-                if(password != this.password){
-                    status = "403";
-                    message = "Login or password is wrong";
-                }
-                                
-                id = user.getId();                                       
-                session.id = user.getId();                
-                session.isLoggedIn = true;                                
-                status = "200";    
-                message = "Logged in";                       
+                
+                if(password == this.password){
+                    id = user.getId();                                       
+                    session.id = user.getId();                
+                    session.isLoggedIn = true;                                
+                    status = 200;    
+                    message = "Logged in";                                           
+                }else{
+                    status = 403;
+                    message = "Login or password is wrong";                    
+                }                                                
             }
         }catch (any e){
-            status = "403";
+            status = 403;
             message = "Login or password is wrong";
         }
 

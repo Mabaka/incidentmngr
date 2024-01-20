@@ -2,6 +2,7 @@ component output='false'{
     this.name = "incidentmngr";
 
 	this.mappings['/controller'] = getDirectoryFromPath( getBaseTemplatePath() ) & 'controller';			
+	this.mappings['/script'] = getDirectoryFromPath( getBaseTemplatePath() ) & 'public\script';			
 	
 	this.ormEnabled = true;
 	this.sessionManagement = true;
@@ -27,7 +28,6 @@ component output='false'{
   	};
 		
 	session.id = "";
-	session.isLoggedIn = false;					
-
+	session.isLoggedIn = false;						
 }
 

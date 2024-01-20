@@ -1,24 +1,24 @@
 ﻿<div class="form_wrapper">
-    <form name="login_form", id="login_form", class="form", action="/controller/login?action=login" method="post">
+    <form name="login_form", id="login_form", class="form">
         <div class="elements_wrapper">
 
             <div class="login_element_wrapper">
                 <div class="login_element">
                     <label for="login">Логин</label>
-                    <input type="text" name="login" required>                    
+                    <input id="login" type="text" name="login" required>                    
                 </div>
             </div>
 
             <div class="password_element_wrapper">
                 <div class="password_element">
                     <label for="password">Пароль</label>
-                    <input type="password" name="password" required>
+                    <input id="password" type="password" name="password" required>
                 </div>
             </div>
 
             <div class="button_element_wrapper">
                 <div class="button_element">
-                    <button>Войти</button>
+                    <input id="btn_login_form_enter" type="button" value="Войти">
                 </div>
             </div>
 
@@ -30,3 +30,5 @@
         </div>
     </form>
 </div>
+
+<script src="/public/script/login_page.js"></script>
