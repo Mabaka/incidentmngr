@@ -1,33 +1,23 @@
-﻿<div class="form_wrapper">    
-    <form name="login_form", id="login_form", class="form">
-        <div class="elements_wrapper">
+﻿<div class="form_wrapper container">
+    <form id="login_form" , class="form row g-3 justify-content-center align-items-center">
+        
+        <div class="col-md-12">
+            <label for="login">Логин</label>
+            <input class="form-control" id="login" type="text" name="login" required>
+        </div>        
 
-            <div class="login_element_wrapper">
-                <div class="login_element">
-                    <label for="login">Логин</label>
-                    <input id="login" type="text" name="login" required>                    
-                </div>
-            </div>
-
-            <div class="password_element_wrapper">
-                <div class="password_element">
-                    <label for="password">Пароль</label>
-                    <input id="password" type="password" name="password" required>
-                </div>
-            </div>
-
-            <div class="button_element_wrapper">
-                <div class="button_element">
-                    <input id="btn_login_form_enter" type="button" value="Войти">
-                </div>
-            </div>
-
-            <div class="a_button_element_wrapper">
-                <div class="a_button_element">
-                    <a href="/reg/">Зарегистрироваться</a>
-                </div>
-            </div>
+        <div class="col-md-12">
+            <label for="password">Пароль</label>
+            <input class="form-control" id="password" type="password" name="password" required>
         </div>
+        
+        <div class="col-md-1">
+            <input class="btn btn-success" id="btn_login_form_enter" type="button" value="Войти">
+        </div>
+        
+        <div class="col-md-1">
+            <a class="btn btn-success" href="/reg/">Зарегистрироваться</a>
+        </div>        
     </form>
 </div>
 

@@ -1,0 +1,49 @@
+﻿<cfscript>
+    if(isDefined('session.isLoggedIn')) {
+        if(!session.isLoggedIn){
+            location('/login/',false);
+        }
+    }else{
+        location('/login/',false);
+    }
+</cfscript>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Номер
+                </th>
+                <th>
+                    Дата
+                </th>
+                <th>
+                    Краткое описание
+                </th>
+                <th>
+                    Пользователь
+                </th>
+                <th>
+                    Статус
+                </th>
+                <th>
+                    Важность
+                </th>
+                <th>
+                    Критичность
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

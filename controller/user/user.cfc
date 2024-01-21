@@ -1,6 +1,6 @@
 component displayname="login" {
     public function getCurrentUser(){        
-        user = entityNew("User");
+        user = createObject('User');        
         try {
             if(isDefined("session.isLoggedIn")) {                
                 if(session.isLoggedIn) {
@@ -16,8 +16,36 @@ component displayname="login" {
         }
     }
 
-    public function addNewUser() {
+    public function addNewUser(string login, string name, string secondname="", string password) {
+        user = entityNew("User");
+        var status = "";
+        var message = "";
+        var id = "";
+        var json = "";
 
+        try{    
+            user.setLogin(login);
+            user.setName(name);
+            user.setSecondname(secondname);
+            user.setPassword(password);
+
+            EntitySave(user);            
+            status = 200;    
+            message = "Success";                        
+        }catch (any e){
+            status = 404;    
+            message = "Error";                        
+        }
+
+        response = structNew();
+        structInsert(response, "name", name);
+        structInsert(response, "status", status);
+        structInsert(response, "message", message);
+        structInsert(response, "id", user.getId());
+
+        json = serializeJSON(response);
+
+        return json;
     }
 
     public function deleteUser() {

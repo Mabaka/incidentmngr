@@ -6,7 +6,7 @@
                 <ul>
                     <li><a href="/error/add/">Добавить ошибку</a></li>
                     <li><a href="/error/list/">Список ошибок</a></li>
-                    <li><a href="/user_controll/add/">Добавить пользователя</a></li>                    
+                    <li><a href="/user/profile/">Добавить пользователя</a></li>                    
                     <li><a href="/controller/login?action=logout">Выйти</a></li>
                 </ul>
             </menu>                    

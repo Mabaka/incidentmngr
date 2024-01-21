@@ -1,5 +1,5 @@
 ﻿<div class="form_wrapper container">
-    <form id="login_form" , class="form row g-3 justify-content-center align-items-center">
+    <form id="useradd_form" , class="form row g-3 justify-content-center align-items-center">
         
         <div class="col-md-12">
             <label for="login">Логин</label>
@@ -22,9 +22,9 @@
         </div>
         
         <div class="col-md-1">
-            <input class="btn btn-success" id="btn_reg_form_enter" type="button" value="Зарегистрироваться">
+            <input class="btn btn-success" id="btn_reg_form_enter" type="button" value="Сохранить">
         </div>        
     </form>
 </div>
 
-<script src="/public/script/reg_page.js"></script>
+<script src="/public/script/login_page.js"></script>
