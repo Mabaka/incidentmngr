@@ -8,7 +8,7 @@
     }
 </cfscript>
 <div class="form_wrapper container">
-    <cfif  error.getStatuse().getId() < 4>
+    <cfif  error.getStatuse().getId() < 5>
     <div class="row g-3 justify-content-between">
         <div class="col-md-3">                    
             <select class="form-select" name="setted_statuse" id="setted_statuse">

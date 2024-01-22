@@ -1,7 +1,7 @@
 <cfscript>
     if(isDefined('session.isLoggedIn')) {
         if(session.isLoggedIn){
-            location('/main/',false);
+            location('/error/list',false);
         }else{
             location('/login/',false);
         }

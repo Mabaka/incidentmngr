@@ -19,7 +19,7 @@
         </div>
         <div class="col-12">
             <label for="error_short_desk">Краткое описание</label>
-            <textarea style="resize:none" class="form-control" name="error_short_desk" id="error_short_desk" rows="1"></textarea>            
+            <textarea required style="resize:none" class="form-control" name="error_short_desk" id="error_short_desk" rows="1"></textarea>            
         </div>
         <div class="col-12">
             <label for="error_full_desk">Полное описание</label>            
@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-4">
             <label for="error_statuses">Статус</label>
-            <select class="form-select" name="error_statuses" id="error_statuses">
+            <select disabled class="form-select" name="error_statuses" id="error_statuses">
                 <cfoutput query="statuses">
                     <option <cfif id == 1>selected</cfif> value="#id#">
                         #name#

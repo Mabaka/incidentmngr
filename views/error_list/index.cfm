@@ -8,7 +8,7 @@
     }
 </cfscript>
 <div class="container">
-    <table class="table">
+    <table id="errors_list" class="table table-striped">
         <thead>
             <tr>
                 <th>
@@ -51,3 +51,4 @@
         </tbody>
     </table>
 </div>
+<script src="/public/script/error_list_page.js"></script>

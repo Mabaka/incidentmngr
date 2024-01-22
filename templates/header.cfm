@@ -1,33 +1,22 @@
-﻿<header>
-    <div class="header_container">
-        <div class="logo"></div>
-        <div class="menu_wrapper">
-            <menu class="menu">
-                <ul>
-                    <li><a href="/error/add/">Добавить ошибку</a></li>
-                    <li><a href="/error/list/">Список ошибок</a></li>
-                    <li><a href="/user/add/">Добавить пользователя</a></li>                    
-                    <li><a href="/controller/login?action=logout">Выйти</a></li>
+﻿<header class="header mb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">Менеджер инцидентов</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="/error/add/">Добавить ошибку</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/error/list/">Список ошибок</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/user/add/">Добавить пользователя</a></li>                                        
                 </ul>
-            </menu>                    
-        </div>
-        
-        <div class="auth_wrapper">
-            <div class="auth">
-                <cfif isDefined("session.isLoggedIn")>
-                    <cfif session.isLoggedIn>
-                        <div class="user_name">
-                            <cfif isDefined('user')>
-                                <a href="/user/profile/"><cfoutput>#user.getName()#</cfoutput></a>
-                            </cfif>
-                        </div>                        
-                    </cfif>
-                <cfelse>
-                    <cfoutput>
-                        <div class="a_btn_login"><a href="">Войти</a></div>                          
-                    </cfoutput>
+            </div>
+            <div class="d-flex align-items-center">
+                <cfif isDefined('user')>
+                    <a class="nav-link" href="/user/profile/"><cfoutput>#user.getName()#</cfoutput></a>
                 </cfif>
             </div>
-        </div>
-    </div>
+            <div class="d-flex align-items-center">
+                <a class="nav-link" href="/controller/login?action=logout">Выйти</a>
+            </div>            
+        </div>        
+    </nav>    
 </header>
