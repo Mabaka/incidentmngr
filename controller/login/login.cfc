@@ -55,27 +55,4 @@ component displayname="login" {
         sessionRotate();        
     }
 
-    public function reg(string name,string secondname){
-        var status = "";
-        var message = "";
-        var id = "";
-        var json = "";
-
-        try{
-
-        }catch(any e){
-            status = "404";
-            message = "Registration is failed";
-        }
-
-        response = structNew();
-        structInsert(response, "this.name", this.name);
-        structInsert(response, "status", status);
-        structInsert(response, "message", message);
-        structInsert(response, "id", id);
-
-        json = serializeJSON(response);
-
-        return json;
-    }
 }

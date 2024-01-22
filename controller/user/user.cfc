@@ -1,4 +1,4 @@
-component displayname="login" {
+component displayname="user" {
     public function getCurrentUser(){                
         try {
             if(isDefined("session.isLoggedIn")) {                
@@ -16,6 +16,7 @@ component displayname="login" {
     }
 
     public function addNewUser(string login, string name, string secondname="", string password) {
+        ORMReload();
         user = entityNew("User");
         var status = "";
         var message = "";
@@ -56,6 +57,7 @@ component displayname="login" {
         var message = "";        
         var json = "";                       
         try{    
+            ORMReload();
             user = entityLoad("User",{id: id})[1];
             user.setLogin(login);
             user.setName(name);

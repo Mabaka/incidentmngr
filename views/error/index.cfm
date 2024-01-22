@@ -60,6 +60,7 @@
         </div>
         <div class="col-1">
             <label for="error_user">Пользователь</label>
+            <input type="hidden" name="error_user_id" id="error_user_id" value="<cfoutput>#user.getId()#</cfoutput>">            
             <input class="form-control" name="error_user" id="error_user" type="text" readonly value="<cfoutput>#user.getName()#</cfoutput>">
         </div>
         <div class="col-12">
