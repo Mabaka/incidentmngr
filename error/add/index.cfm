@@ -11,6 +11,10 @@
 
     statuses_model = entityLoad("Statuses");   
     statuses = entityToQuery(statuses_model);    
+
+    errors = entityLoad("Error",{},"number DESC",{maxResults=1});       
+    number = arrayLen(errors) ? errors[1].getNumber() + 1 : 1;
+    
 </cfscript>
 
 <cfinclude  template="../../templates/main.cfm">

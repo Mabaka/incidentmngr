@@ -11,7 +11,7 @@
     <form class="form row g-3" id="error_form">                
         <div class="col-md-6">
             <label for="error_num">Номер</label>
-            <input class="form-control" name="error_num" id="error_num" type="text" value="1" readonly>
+            <input class="form-control" name="error_num" id="error_num" type="text" value="<cfoutput>#number#</cfoutput>" readonly>
         </div>
         <div class="col-md-6">
             <label for="error_date">Дата</label>
@@ -26,30 +26,30 @@
             <textarea style="resize:none" class="form-control" name="error_full_desk" id="error_full_desk" rows="10"></textarea>            
         </div>
         <div class="col-md-4">
-            <label for="error_importances">Срочность</label>
-            <select class="form-control" name="error_importances" id="error_importances">
-                <cfoutput query="importances">
-                    <option value="#id#">
-                        #name#
-                    </option>
-                </cfoutput>  
-            </select>
-        </div>
-        <div class="col-md-4">
             <label for="error_statuses">Статус</label>
             <select class="form-control" name="error_statuses" id="error_statuses">
                 <cfoutput query="statuses">
-                    <option value="#id#">
+                    <option <cfif id == 1>selected</cfif> value="#id#">
                         #name#
                     </option>
                 </cfoutput>                  
             </select>
         </div>
         <div class="col-md-4">
+            <label for="error_importances">Срочность</label>
+            <select class="form-control" name="error_importances" id="error_importances">
+                <cfoutput query="importances">
+                    <option <cfif id == 3>selected</cfif> value="#id#">
+                        #name#
+                    </option>
+                </cfoutput>  
+            </select>
+        </div>        
+        <div class="col-md-4">
             <label for="error_criticalities">Критичность</label>
             <select class="form-control" name="criticalities" id="error_criticalities">
                 <cfoutput query="criticalities">
-                    <option value="#id#">
+                    <option <cfif id == 3>selected</cfif> value="#id#">
                         #name#
                     </option>
                 </cfoutput>
