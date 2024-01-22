@@ -8,6 +8,10 @@
 <cfparam name="form.error_user" type="string" default=""/>
 <cfparam name="form.error_id" type="string" default=""/>
 
+<cfparam name="form.error_status_date" type="string" default=""/>
+<cfparam name="form.error_status_user_id" type="string" default=""/>
+<cfparam name="form.error_status_comment" type="string" default=""/>
+
 <cfscript>		
 	error = new error();	
 	result = "";	
@@ -33,6 +37,12 @@
         form.error_criticality,
         form.error_user
     )};
+
+    if(url["action"]=="addComment"){result = error.addComment(
+        form.error_id,
+        form.error_status_comment,
+        form.error_status_user_id,
+        form.error_status_date)};    
 </cfscript>
 <cfoutput>
 	#writeDump(result)#

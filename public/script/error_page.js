@@ -70,4 +70,31 @@ $(document).ready(()=>{
             }
         })      
     });
+
+    $("#btn_error_form_modal_save").click(()=>{
+        const error_status_comment = $("#error_status_comment").val();        
+        const error_status_date = $("#error_status_date").val();                
+        const error_status_user_id = $("#error_status_user_id").val();        
+        const error_id = $("#error_id").val();        
+
+        $.ajax({
+            type:"post",
+            url:"/controller/error/?action=addComment",   
+            dataType: "json",
+            data: {
+                error_id:error_id,
+                error_status_date:error_status_date,
+                error_status_user_id:error_status_user_id,
+                error_status_comment:error_status_comment
+            },            
+            success: (res)=>{
+                if(res.status === 200){                    
+                    alert(res.message);
+                    //return window.location.href = "/";
+                }else{
+                    alert(res.message);
+                }
+            }
+        })      
+    });
 })
