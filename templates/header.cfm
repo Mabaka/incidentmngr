@@ -6,7 +6,7 @@
                 <ul>
                     <li><a href="/error/add/">Добавить ошибку</a></li>
                     <li><a href="/error/list/">Список ошибок</a></li>
-                    <li><a href="/user/profile/">Добавить пользователя</a></li>                    
+                    <li><a href="/user/add/">Добавить пользователя</a></li>                    
                     <li><a href="/controller/login?action=logout">Выйти</a></li>
                 </ul>
             </menu>                    
@@ -18,7 +18,7 @@
                     <cfif session.isLoggedIn>
                         <div class="user_name">
                             <cfif isDefined('user')>
-                                <a href="/user"><cfoutput>#user.getName()#</cfoutput></a>
+                                <a href="/user/profile/"><cfoutput>#user.getName()#</cfoutput></a>
                             </cfif>
                         </div>                        
                     </cfif>
