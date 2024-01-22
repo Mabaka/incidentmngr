@@ -17,7 +17,7 @@
     
     id = url.id;
     error = entityLoad("Error",{id:id})[1];       
-    
+    error_story = entityLoad("ErrorStory",{error_id:id},"id ASC")    
 </cfscript>
 
 <cfinclude  template="../../templates/main.cfm">

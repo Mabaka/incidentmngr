@@ -45,5 +45,5 @@
         form.error_status_date)};    
 </cfscript>
 <cfoutput>
-	#writeDump(result)#
+	#result#
 </cfoutput>		

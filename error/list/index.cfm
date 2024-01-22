@@ -3,7 +3,7 @@
     user_controller = new controller.user.user();    
     user = user_controller.getCurrentUser();  
 
-    errors = entityLoad('Error')    
+    errors = entityLoad('Error',{},"number ASC")    
 </cfscript>
 
 <cfinclude  template="../../templates/main.cfm">

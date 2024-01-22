@@ -94,17 +94,16 @@ component displayname="error" {
         var status = "";
         var message = "";
         var id = "";
-        var json = "";           
+        var json = "";                   
         
-        try{
+        try{            
             ormReload();
             error_st = entityNew("ErrorStory");
                         
             error_st.setComment(error_status_comment); 
             error_st.SetError_id(int(error_id));
             error_st.SetUser_id(int(error_status_user_id));
-            error_st.SetDate(error_status_date);
-                        
+            error_st.SetDate(error_status_date);                        
             entitySave(error_st);
 
             status = 200;    

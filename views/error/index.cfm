@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-4">
             <label for="error_statuses">Статус</label>
-            <select class="form-control" name="error_statuses" id="error_statuses">
+            <select class="form-select" name="error_statuses" id="error_statuses">
                 <cfoutput query="statuses">
                     <option <cfif id == 1>selected</cfif> value="#id#">
                         #name#
@@ -37,7 +37,7 @@
         </div>
         <div class="col-md-4">
             <label for="error_importances">Срочность</label>
-            <select class="form-control" name="error_importances" id="error_importances">
+            <select class="form-select" name="error_importances" id="error_importances">
                 <cfoutput query="importances">
                     <option <cfif id == 3>selected</cfif> value="#id#">
                         #name#
@@ -47,7 +47,7 @@
         </div>        
         <div class="col-md-4">
             <label for="error_criticalities">Критичность</label>
-            <select class="form-control" name="criticalities" id="error_criticalities">
+            <select class="form-select" name="criticalities" id="error_criticalities">
                 <cfoutput query="criticalities">
                     <option <cfif id == 3>selected</cfif> value="#id#">
                         #name#
