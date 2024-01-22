@@ -15,8 +15,7 @@ component displayname="user" {
         }
     }
 
-    public function addNewUser(string login, string name, string secondname="", string password) {
-        ORMReload();
+    public function addNewUser(string login, string name, string secondname="", string password) {        
         user = entityNew("User");
         var status = "";
         var message = "";

@@ -36,6 +36,7 @@ component displayname="login" {
         }catch (any e){
             status = 403;
             message = "Login or password is wrong";
+            return e;
         }
 
         response = structNew();

@@ -35,15 +35,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
+        <cfloop array=#errors# index="error">
+            <cfoutput>
+                <tr>
+                    <td><a href="/error/element/?id=<cfoutput>#error.getId()#</cfoutput>">#error.getNumber()#</a></td>
+                    <td>#dateformat(#error.getDate()#,"yyyy-mm-dd")# #timeFormat(#error.getDate()#,"HH:MM")#</td>
+                    <td>#error.getShort_desk()#</td>
+                    <td>#error.getUser().getName()#</td>
+                    <td>#error.getStatuse().getName()#</td>
+                    <td>#error.getImportance().getName()#</td>
+                    <td>#error.getCriticality().getName()#</td>
+                </tr>
+            </cfoutput>            
+        </cfloop>            
         </tbody>
     </table>
 </div>
