@@ -1,4 +1,13 @@
-﻿<div class="form_wrapper container">
+﻿<cfscript>
+    if(isDefined('session.isLoggedIn')) {
+        if(!session.isLoggedIn){
+            location('/login/',false);
+        }
+    }else{
+        location('/login/',false);
+    }
+</cfscript>
+<div class="form_wrapper container">
     <form id="form_user_profile" , class="form row g-3 justify-content-center align-items-center">
         
         <input value="<cfoutput>#user.getId()#</cfoutput>" id="id" type="hidden" name="id">

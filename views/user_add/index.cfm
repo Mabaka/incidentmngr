@@ -1,4 +1,13 @@
-﻿<div class="form_wrapper container mt-5">
+﻿<cfscript>
+    if(isDefined('session.isLoggedIn')) {
+        if(!session.isLoggedIn){
+            location('/login/',false);
+        }
+    }else{
+        location('/login/',false);
+    }
+</cfscript>
+<div class="form_wrapper container mt-5">
     <div class="row d-flex justify-content-center">
         <div class="col-md-6">
             <div class="card px-5 py-5">
